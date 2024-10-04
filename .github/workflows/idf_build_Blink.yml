@@ -21,7 +21,6 @@ on:
         default: "idf.py build"
         required: false
 
-
 jobs:
   build:
 
@@ -44,3 +43,15 @@ jobs:
         name: blink.bin
         path: |
           examples/get-started/blink/build/blink.bin
+    - name: Download built firmware (bootloader)
+      uses: actions/upload-artifact@v4
+      with:
+        name: bootloader.bin
+        path: |
+          examples/get-started/blink/build/bootloader/bootloader.bin
+    - name: Download built firmware (partition-table)
+      uses: actions/upload-artifact@v4
+      with:
+        name: partition-table.bin
+        path: |
+          examples/get-started/blink/build/partition_table/partition-table.bin
