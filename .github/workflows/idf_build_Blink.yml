@@ -43,4 +43,4 @@ jobs:
       with:
         name: blink.bin
         path: |
-          examples/get-started/hello_world/build/blink.bin
+          examples/get-started/blink/build/blink.bin
